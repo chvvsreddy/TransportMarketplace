@@ -1,6 +1,6 @@
 "use client"
 import React from 'react'
-import {Menu,Bell,Sun,Moon, Settings} from 'lucide-react'
+import {Bell,Sun,Moon, Settings, PanelLeftClose, PanelLeftOpen} from 'lucide-react'
 import Link from "next/link";
 import Image from "next/image";
 import { useAppDispatch, useAppSelector } from '@/app/redux';
@@ -29,7 +29,7 @@ const Navbar = () => {
             <button
             className="px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100"
             onClick={toggleSidebar} >
-            <Menu className="w-4 h-4" />
+              { isSidebarCollapsed ?  <PanelLeftOpen className="w-6 h-6" />:  <PanelLeftClose className="w-6 h-6" />}             
             </button>
             <div className="relative">
             <input type="search" placeholder="Start type to search"

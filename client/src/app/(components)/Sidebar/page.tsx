@@ -3,7 +3,7 @@
 
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsSidebarCollapsed } from "@/state";
-import {Atom, Binary, BoxIcon,ChartBarIncreasing,CircleDollarSign,Layout, LucideIcon, Menu,  Telescope,  TruckIcon, User,} from "lucide-react";
+import {Atom, Binary, BoxIcon,ChartBarIncreasing,CircleDollarSign,Layout, LucideIcon, Menu,  Telescope,  TruckIcon, User, Users,} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -70,7 +70,7 @@ const Sidebar = () => {
         <h6 className={`${isSidebarCollapsed? "hidden": " block"} font-normal text-sm p-2 text-neutral-500` }>Activity</h6>
         <SidebarLink
           href="/users"
-          icon={BoxIcon}
+          icon={Users}
           label="Users"
           isCollapsed={isSidebarCollapsed}
         />
