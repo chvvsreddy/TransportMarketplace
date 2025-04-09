@@ -1,3 +1,4 @@
+"use client"
 import Link from 'next/link'
 import React,{useState} from 'react'
 import { Menu } from 'lucide-react'
@@ -6,8 +7,8 @@ import {  MailOutlined, PhoneOutlined, SearchOutlined, VideoCameraOutlined,  Wha
 import Image from 'next/image';
 
 const navigation = [
-  { name: 'Post Load', href: '/Postload' },
-  { name: 'Find Trucks', href: '/FindTrucks' },
+  { name: 'Find Load', href: '/findloads' },   
+  { name: 'Find Trucks', href: '/findtrucks' },
 
 ]
 
@@ -28,14 +29,11 @@ const Header = () => {
                   <VideoCameraOutlined />
                 </div>
                 <div className="navbar-icon">
-                  <PhoneOutlined />
+                  <PhoneOutlined className='mx-1'  /><span className='hidden sm:inline-block'>+91 864 6444 2222</span>
                 </div>
-                <h4 className="mobile-number">
-                  +91 864 6444 2222
-                </h4>
-                <div className="navbar-mail">
-                  <MailOutlined style={{ fontSize: "larger",  borderLeft: "1px solid white", paddingLeft: "15px", }} />
-                  info@goodseva.com
+                       <div className="navbar-mail">
+                  <MailOutlined className='mx-1' />
+                  <span className='hidden sm:inline-block'> info@goodseva.com</span>
                 </div>
               </div>
           </div>

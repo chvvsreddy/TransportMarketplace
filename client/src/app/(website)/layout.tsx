@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import Header from "../(components)/Header";
+import Footer from "../(components)/Footer";
 
 export const metadata: Metadata = {
   title: "Transpot marketplace",
@@ -15,9 +16,10 @@ export default function WebsiteLayout({
   return (
     <html lang="en">
       <body>
-        <Header/>
-      <h1>Tranport marketplace WEBSITE</h1>
+      <Header/>
+      
         {children}
+      <Footer/>
       </body>
     </html>
   );
